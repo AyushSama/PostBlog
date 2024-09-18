@@ -1,0 +1,77 @@
+/* Full page container to center the login box */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f5f5f5;
+}
+
+/* The login box that wraps the entire form and its elements */
+.login-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Style for the form fields */
+.userid, .password {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Style for Material form fields */
+mat-form-field {
+  width: 100%;
+  max-width: 300px; /* Reduce the width of input fields */
+}
+
+/* Style for the login button */
+.loginButton ,.signupButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Button customization */
+button.mat-fab.extended {
+  width: 100%;
+  max-width: 300px; /* Match button width with form fields */
+  background-color: #3f51b5;
+  color: white;
+  font-weight: 500;
+}
+
+/* Button hover effect */
+button.mat-fab.extended:hover {
+  background-color: #303f9f;
+}
+
+/* Style for the password toggle icon */
+.passIcon {
+  margin-right: 5px;
+}
+
+/* Customize appearance for Material icons in the form */
+mat-icon.matSuffix {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .login-box {
+    padding: 30px;
+    max-width: 90%;
+  }
+
+  mat-form-field,
+  button.mat-fab.extended {
+    max-width: 100%; /* Ensure input fields and buttons are responsive */
+  }
+}

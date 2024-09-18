@@ -1,0 +1,50 @@
+<div class="login-container">
+  <div class="login-box">
+      <form>
+<div class="userid">
+  <mat-form-field appearance="fill">
+      <mat-label>Username</mat-label>
+      <input matInput id="userName" [(ngModel)]="userName" name="userName" required>
+      <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+
+</div>
+ 
+<div class="password">
+  <mat-form-field>
+    <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide() ? 'password' : 'text'" id="password" [(ngModel)]="password" name="password" required />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="clickEvent($event)"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide()"
+      type="submit"
+    >
+      <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+
+<div class="loginButton">
+  <button (click)="login()" mat-fab extended>
+    <mat-icon>login</mat-icon>
+    Login
+  </button>
+</div>
+@if (errorMessage)
+{
+  <div style="color: red;">
+      {{errorMessage}}
+  </div>
+}
+<!-- <div class="signupButton">
+  <button mat-fab extended>
+    <mat-icon>add_circle</mat-icon>
+    Signup
+  </button>
+</div> -->
+</form>
+</div>
+</div>
