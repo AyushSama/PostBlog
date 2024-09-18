@@ -50,6 +50,7 @@ export class LoginComponent {
       next: (res: any) => {
         if(res.userId){
           this.isLoggedIn.emit(true);
+          localStorage.setItem("userId", res.userId);
           this.router.navigate(['/feed']);
         }
       },
