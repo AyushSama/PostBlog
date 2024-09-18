@@ -13,6 +13,9 @@
     </section>
   </div>
 }
+@else {
+  <app-login (isLoggedIn)="handleLogin($event)" ></app-login>
+}
 <main class="page-content">
   <router-outlet />
 </main>

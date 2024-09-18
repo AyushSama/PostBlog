@@ -16,5 +16,8 @@ export class AppComponent {
   isLoggedIn = false;
   hideSingleSelectionIndicator = signal(false);
 
+  handleLogin(status: boolean) {
+    this.isLoggedIn = status;
+  }
   
 }
