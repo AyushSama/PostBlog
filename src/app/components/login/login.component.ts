@@ -49,8 +49,10 @@ export class LoginComponent {
     .subscribe({
       next: (res: any) => {
         if(res.userId){
+          console.log(res);
           this.isLoggedIn.emit(true);
           localStorage.setItem("userId", res.userId);
+          localStorage.setItem("userName", res.userName);
           this.router.navigate(['/feed']);
         }
       },
